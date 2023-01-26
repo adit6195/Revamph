@@ -77,11 +77,12 @@ class _SignupFormWidgetState extends State<SignupFormWidget> {
             ),
             TextFormField(
               validator: (value) {
-                if (value != null) {
+                if (value != "") {
                   return null;
                 }
                 return "This field is important";
               },
+              
               controller: controller.name,
               decoration: const InputDecoration(
                 label: Text("Full Name *"),
@@ -109,7 +110,7 @@ class _SignupFormWidgetState extends State<SignupFormWidget> {
             const SizedBox(height: 10),
             TextFormField(
               validator: (value) {
-                if (value != null) {
+                if (value != "") {
                   return null;
                 }
                 return "This field is important";
@@ -132,7 +133,7 @@ class _SignupFormWidgetState extends State<SignupFormWidget> {
             const SizedBox(height: 10),
             TextFormField(
               validator: (value) {
-                if (value != null) {
+                if (value != "") {
                   return null;
                 }
                 return "This field is important";
@@ -164,7 +165,7 @@ class _SignupFormWidgetState extends State<SignupFormWidget> {
             const SizedBox(height: 10),
             TextFormField(
               validator: (value) {
-                if (value != null) {
+                if (value != "") {
                   return null;
                 }
                 return "This field is important";
@@ -197,7 +198,7 @@ class _SignupFormWidgetState extends State<SignupFormWidget> {
             const SizedBox(height: 10),
             TextFormField(
               validator: (value) {
-                if (value != null) {
+                if (value != "") {
                   return null;
                 }
                 return "This field is important";
@@ -232,7 +233,7 @@ class _SignupFormWidgetState extends State<SignupFormWidget> {
             if(_selectedvalue == "Student")
             TextFormField(
               validator: (value) {
-                if (value != null) {
+                if (value != "") {
                   return null;
                 }
                 return "This field is important";
@@ -266,7 +267,7 @@ class _SignupFormWidgetState extends State<SignupFormWidget> {
             TextFormField(
               keyboardType: TextInputType.datetime,
               validator: (value) {
-                if (value != null) {
+                if (value != "") {
                   return null;
                 }
                 return "This field is important";
@@ -368,6 +369,7 @@ class _SignupFormWidgetState extends State<SignupFormWidget> {
                           controller.collegename.text.trim(),
                           controller.admissionyear.text.trim(),
                           controller.passoutyear.text.trim(),
+                          context,
                           );
                     }
                   },

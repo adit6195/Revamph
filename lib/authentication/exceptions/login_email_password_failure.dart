@@ -6,7 +6,7 @@ class loginWithEmailAndPasswordFailure{
   factory loginWithEmailAndPasswordFailure.code(String code){
     switch(code){
       case 'wrong-password':
-        return const loginWithEmailAndPasswordFailure('Please enter stronger password.');
+        return const loginWithEmailAndPasswordFailure('Incorrect Password');
       case 'invalid-email':
         return const loginWithEmailAndPasswordFailure('Email is not valid or badly formatted.');
       case 'operation-not-allowed':

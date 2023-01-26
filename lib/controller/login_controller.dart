@@ -12,7 +12,7 @@ class LoginController extends GetxController {
   final password = TextEditingController();
 
   // Calling this function from screen to do the authentication
-  void loginUser(String email, String password){
-    AuthenticationRepository.instance.loginWithEmailAndPassword(email, password);
+  void loginUser(String email, String password, BuildContext context){
+    AuthenticationRepository.instance.loginWithEmailAndPassword(email, password, context);
   }
 }

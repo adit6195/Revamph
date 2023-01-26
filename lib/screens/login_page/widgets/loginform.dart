@@ -21,6 +21,12 @@ class LoginFormWidget extends StatelessWidget {
           children: [
             TextFormField(
               controller: controller.email,
+              validator: (value) {
+                if (value != "") {
+                  return null;
+                }
+                return "This field is important";
+              },
               keyboardType: TextInputType.emailAddress,
               decoration: const InputDecoration(
                 label: Text("Email"),
@@ -37,6 +43,12 @@ class LoginFormWidget extends StatelessWidget {
             ),
             const SizedBox(height: 15),
             TextFormField(
+              validator: (value) {
+                if (value != "") {
+                  return null;
+                }
+                return "This field is important";
+              },
               controller: controller.password,
               decoration: const InputDecoration(
                 label:  Text("Password"),
@@ -76,7 +88,7 @@ class LoginFormWidget extends StatelessWidget {
                   ),
                   onPressed: () {
                     if(_formkey.currentState!.validate()){
-                      LoginController.instance.loginUser(controller.email.text.trim(), controller.password.text.trim());
+                      LoginController.instance.loginUser(controller.email.text.trim(), controller.password.text.trim(), context);
                     }
                   }, child: Text("Login".toUpperCase())),
             ),
