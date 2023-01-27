@@ -87,7 +87,7 @@ class AuthenticationRepository extends GetxController {
               child: Container(
                 color: Colors.black,
                 padding: const EdgeInsets.all(14),
-                child: Text("okay".toUpperCase(),style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
+                child: Text("okay".toUpperCase(),style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15,color: Colors.white)),
               ),
             ),
           ],
